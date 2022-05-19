@@ -32,17 +32,17 @@ io.on('connection', (socket) => {
 
     //Use the object to move the players coordinates
     if (playerMovement.left && player.x > 0) {
-      player.x -= 4
+      player.x -= 8
     }
     if (playerMovement.right && player.x < canvasWidth - player.width) {
-    player.x += 4
+    player.x += 8
   }
     
     if (playerMovement.up && player.y > 0) {
-      player.y -= 4
+      player.y -= 8
     }
     if (playerMovement.down && player.y < canvasHeight - player.height) {
-      player.y += 4
+      player.y += 8
     }
   })
 
