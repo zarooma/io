@@ -14,14 +14,13 @@ document.getElementById("game").height = document.documentElement.clientHeight;
 socket.emit('newPlayer');
 
 //Draw a player rectangle at x,y
-function drawPlayer(player) {
+function drawPlayer(player){
+  base_image = new Image();
+  base_image.src = 'img/player.png';
+  base_image.onload = function(){
+    ctx.drawImage(base_image, 50, 50);
 
-  ctx.beginPath();
-  ctx.rect(player.x, player.y, 50, 50);
-  ctx.stroke();
-
-}
-
+  } }
 //listen to the server and draw the players
 var gamesate = null;
 
